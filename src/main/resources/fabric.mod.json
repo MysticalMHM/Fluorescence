@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "fluorescence",
+  "version": "${version}",
+
+  "name": "Fluorescence",
+  "description": "",
+  "authors": [],
+  "contact": {},
+
+  "license": "LGPL-3.0",
+  "icon": "assets/fluorescence/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "client": ["com.sudarkoff.max.fluorescence.client.FluorescenceClient"],
+    "main": ["com.sudarkoff.max.fluorescence.Fluorescence"]
+  },
+
+  "mixins": [
+    "fluorescence.mixins.json"
+    ,{
+      "config": "fluorescence.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
